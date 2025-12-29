@@ -12,8 +12,6 @@ DOT NOT install NM-16ESW OR configure VLANs
 Verify routers are up
 ```
 show version
-
 ```
-
 Step- Confiture IP addressing (Layer 3 only)
 R1 ↔ R3: 10.0.13.0/30
