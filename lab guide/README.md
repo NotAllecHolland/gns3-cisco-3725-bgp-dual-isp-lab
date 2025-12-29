@@ -13,5 +13,55 @@ Verify routers are up
 ```
 show version
 ```
-Step- Confiture IP addressing (Layer 3 only)
-R1 ↔ R3: 10.0.13.0/30
+Step 2 - Confiture IP addressing (Layer 3 only)
+
+IP plan
+R1 <---> R3: 10.0.13.0/30
+R2 <---> R3: 10.0.23.0/30
+
+Configure interfaces:
+On R1-ISP-A:
+
+```
+interface FastEtherneet0/0
+  ip address 10.0.13.1 255.255.255.252
+  no shutdown
+```
+On R3-Customer:
+```
+interface FastEthernet0/0
+  ip address 10.0.13.2 255.255.255.252
+  no shutdown
+
+interface FastEthernet0/1
+  ip address 10.0.23.2 255.255.255.252
+  no shutdown
+```
+On R2-ISP-B
+```
+interface FastEthernet0/0
+ip address 10.0.23.1 255.255.255.252
+no shutdown
+```
+Verify on all routers
+```
+show ip interface brief
+ping 10.0.13.2
+ping 10.0.23.2
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
