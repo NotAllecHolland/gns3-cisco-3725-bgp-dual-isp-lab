@@ -22,6 +22,7 @@ R1 <---> R3: 10.0.13.0/30
 R2 <---> R3: 10.0.23.0/30
 
 Configure interfaces:
+
 On R1-ISP-A:
 
 ```
