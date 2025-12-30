@@ -16,6 +16,7 @@ show version
 Step 2 - Confiture IP addressing (Layer 3 only)
 
 IP plan
+
 R1 <---> R3: 10.0.13.0/30
 
 R2 <---> R3: 10.0.23.0/30
